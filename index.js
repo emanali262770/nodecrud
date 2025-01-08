@@ -10,9 +10,7 @@ dotenv.config();
 const app = express();
 app.use(cors())
 app.use(express.static(path.resolve(process.env.PUBLIC_DIR)));
-// app.use('*',(res,req)=>{
-//   // res.sendFile(path.resolve(__dirname,'dist','index.html'));
-// })
+
 app.use(express.json());
 app.use('/products', ProductRoutes);
 
